@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    background-color: #d3d3d3;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokeball {
+    width: 450px;
+    height: 450px;
+    border: 5px solid black;
+    border-radius: 50%;
+    background-color: #F04037;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 -225px 0 -100px white, inset 0 -240px 0 -65px black;
+}
+
+.pokeball::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: inset -7px 0 15px 0 rgba(0, 0, 0, 0.4);
+    transform: rotate(45deg);
+}
+
+.highlight {
+    background-color: white;
+    width: 95px;
+    height: 125px;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 40px;
+    left: 47px;
+}
+
+.inner-circle {
+    background-color: white;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translatex(-50%);
+    box-shadow: 0px 0px 0px 25px black;
+}
+
+.inner-circle::before {
+    content: "";
+    width: 65px;
+    height: 65px;
+    display: block;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
