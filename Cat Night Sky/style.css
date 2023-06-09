@@ -5,7 +5,6 @@ body {
 }
 
 .container {
-    border: 1px solid white;
     height: 530px;
     width: 350px;
     position: absolute;
