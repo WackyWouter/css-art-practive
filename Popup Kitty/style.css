@@ -1,0 +1,208 @@
+:root {
+    --popup-white-cat-fur-colour: white;
+    --popup-white-cat-eye-colour: #434343;
+    --popup-white-cat-nose-colour: pink;
+    --popup-cat-hat-colour: #ff6347;
+    --popup-cat-deco-colour: #ffff9d;
+}
+
+body {
+    background-color: rgb(201, 172, 209);
+    ;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.box {
+    height: 120px;
+    width: 200px;
+    background-color: #ffff9d;
+    position: relative;
+    top: 300px;
+    left: 150px;
+    background-image: radial-gradient(#f7dd5e 5px, transparent 5px);
+    background-size: 35px 35px;
+    background-position: -5px -12px;
+}
+
+.b1, .b2 {
+    background-color: #ffff9d;
+    height: 8px;
+    width: 50px;
+    position: relative;
+}
+
+.b1 {
+    right: 48px;
+    transform: rotate(-20deg);
+    transform-origin: right;
+}
+
+.b2 {
+    left: 198px;
+    bottom: 8px;
+    transform-origin: left;
+    transform: rotate(20deg);
+}
+
+.popup-cat {
+    position: relative;
+    bottom: 40px;
+    left: 40px;
+    z-index: -1;
+    transition: 1s;
+}
+
+.popup-cat-face {
+    height: 140px;
+    width: 120px;
+    background-color: var(--popup-white-cat-fur-colour);
+    border-radius: 50%;
+}
+
+.popup-cat-lower {
+    height: 40px;
+    background-color: var(--popup-white-cat-fur-colour);
+    width: 140px;
+    border-radius: 0 0 140px 140px;
+    position: relative;
+    top: 60px;
+    right: 10px;
+}
+
+.popup-cat-ear-l, .popup-cat-ear-r {
+    height: 0;
+    width: 0;
+    border-bottom: 35px solid var(--popup-white-cat-fur-colour);
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    position: relative;
+}
+
+.popup-cat-ear-l {
+    bottom: 55px;
+    transform: rotate(-30deg);
+
+}
+
+.popup-cat-ear-r {
+    bottom: 90px;
+    left: 87px;
+    transform: rotate(40deg);
+}
+
+.popup-cat-eye-l, .popup-cat-eye-r {
+    height: 15px;
+    width: 13px;
+    position: relative;
+}
+
+.popup-cat-eye-l {
+    bottom: 65px;
+    left: 20px;
+}
+
+.popup-cat-eye-r {
+    bottom: 80px;
+    left: 83px;
+}
+
+.popup-cat-eye {
+    background-color: var(--popup-white-cat-eye-colour);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    animation: blink 5s infinite;
+}
+
+@keyframes blink {
+    20% {
+        transform: scaleY(0);
+    }
+
+    45% {
+        transform: scaleY(1);
+    }
+}
+
+.popup-cat-nose {
+    width: 0;
+    height: 0;
+    border-top: 10px solid var(--popup-white-cat-nose-colour);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: relative;
+    bottom: 72px;
+    left: 48px;
+}
+
+.popup-cat-hat {
+    height: 0;
+    width: 0;
+    border-bottom: 100px solid var(--popup-cat-hat-colour);
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    position: relative;
+    bottom: 220px;
+    left: 40px;
+    transform: rotate(10deg);
+}
+
+.popup-cat-deco {
+    position: relative;
+    right: 2px;
+    top: 2px;
+}
+
+.popup-cat-d1, .popup-cat-d2, .popup-cat-d3, .popup-cat-d4 {
+    background-color: var(--popup-cat-deco-colour);
+    height: 40px;
+    width: 5px;
+    position: relative;
+}
+
+.popup-cat-d1 {
+    bottom: 20px;
+}
+
+.popup-cat-d2 {
+    transform: rotate(45deg);
+    bottom: 60px;
+}
+
+.popup-cat-d3 {
+    transform: rotate(90deg);
+    bottom: 100px;
+}
+
+.popup-cat-d4 {
+    transform: rotate(135deg);
+    bottom: 140px;
+}
+
+.box:hover .popup-cat {
+    transform: translateY(-60px);
+}
+
+.shadow {
+    background-color: #97819d;
+    height: 30px;
+    width: 250px;
+    border-radius: 50%;
+    position: relative;
+    top: 285px;
+    left: 125px;
+    opacity: 0.3;
+    z-index: -1;
+}
