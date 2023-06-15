@@ -1,0 +1,109 @@
+/*==================== CAT ===================== */
+:root {
+    --music-note-color: #fe5f55;
+}
+
+/* To apply the background and center align the elemnts */
+body {
+    background-color: #191919;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+/* Setting width to parent element */
+.parent {
+    width: 260px;
+}
+
+/* Align the parent and music-note elements using flex */
+.parent,
+.music-note-level-1,
+.music-note-level-2,
+.music-note-level-5 {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Setting width and position to music-note-level div elements */
+.music-note-level-1,
+.music-note-level-2,
+.music-note-level-5 {
+    position: relative;
+    width: 120px;
+}
+
+/* Music Notes bottom style */
+.music-note {
+    height: 40px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.music-note.music-note-1,
+.music-note.music-note-1::after,
+.music-note.music-note-2,
+.music-note.music-note-2::after,
+.music-note.music-note-2::before,
+.music-note.music-note-4,
+.music-note.music-note-4::before,
+.music-note.music-note-4::after {
+    background-color: var(--music-note-color);
+}
+
+/* Music Notes bars style */
+.music-note.music-note-3,
+.music-note.music-note-3::before,
+.music-note.music-note-3::after {
+    background-color: var(--music-note-color);
+}
+
+.music-note::before,
+.music-note::after {
+    position: absolute;
+    top: -80px;
+}
+
+.music-note::after,
+.music-note.music-note-4::before {
+    content: "";
+    height: 100px;
+    width: 10px;
+}
+
+.music-note.music-note-1::after,
+.music-note.music-note-3::after,
+.music-note.music-note-4::before {
+    right: 70px;
+}
+
+.music-note.music-note-2::after,
+.music-note.music-note-4::after {
+    right: 0;
+}
+
+.music-note.music-note-2::before {
+    content: "";
+    height: 10px;
+    width: 60px;
+    right: 10px;
+}
+
+.music-note.music-note-3::before {
+    content: "";
+    height: 10px;
+    width: 30px;
+    right: 40px;
+}
+
+.music-note.music-note-4::after {
+    content: "";
+    background: transparent;
+    height: 10px;
+    border: 10px solid var(--music-note-color);
+    right: 40px;
+    width: 40px;
+    border-right: none;
+    border-left: none;
+}
